@@ -1,5 +1,5 @@
-# Reinterprets
-extends reinterpret to work with Unsigned, Signed, AbstractFloat
+# Reinterpret
+extends reinterpret to work more generally with Unsigned, Signed, AbstractFloat
 
 ```julia
 julia> reinterpret(Signed,1.0)
