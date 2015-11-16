@@ -9,7 +9,8 @@ for (utype,itype,ftype) in ((:UInt16, :Int16, :Float16), (:UInt32, :Int32, :Floa
         reinterpret(::Type{Signed}, x::($ftype))   = box($itype,unbox($ftype,x))
         reinterpret(::Type{Unsigned}, x::($utype)) = x
         reinterpret(::Type{Unsigned}, x::($itype)) = box($utype,unbox($itype,x))
-        reinterpret(::Type{Unsigned}, x::($ftype)) = box($utype,unbox($ftype,x))
+        # next line is in Base float.jl
+        # reinterpret(::Type{Unsigned}, x::($ftype)) = box($utype,unbox($ftype,x))
         reinterpret(::Type{AbstractFloat}, x::($utype)) = box($ftype,unbox($utype,x))
         reinterpret(::Type{AbstractFloat}, x::($itype)) = box($ftype,unbox($itype,x))
         reinterpret(::Type{AbstractFloat}, x::($ftype)) = x
