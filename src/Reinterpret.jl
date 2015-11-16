@@ -1,4 +1,4 @@
-module Reinterprets
+module Reinterpret
 
 import Base: unbox, box, reinterpret
 
