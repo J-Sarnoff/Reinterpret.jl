@@ -13,4 +13,10 @@ julia> reinterpret(Signed,Float32(1.0))
 
 julia> reinterpret(AbstractFloat,ans)
 1.0f0
+
+julia> reinterpret(Unsigned,Float32)
+UInt32
+
+julia> reinterpret(AbstractFloat,Int64)
+Float64
 ```
